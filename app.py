@@ -1,26 +1,26 @@
 from flask import Flask,render_template,jsonify
 
 app = Flask(__name__)
-Skillset=[
+Skills=[
     {
         'title':'Programming',
         'set':'C/C++, Python, JavaScript, HTML, CSS'
     },
     {
-    "title": "Frameworks",
-    "set": "Flask, Cirq (quantum computing framework)"
+    'title': 'Frameworks',
+    'set': 'Flask, Cirq (quantum computing framework)'
   },
   {
-    "title": "Tools",
-    "set": "UiPath (Robotic Process Automation), ROS"
+    'title': 'Tools',
+    'set': 'UiPath (Robotic Process Automation), ROS'
   },
   {
-    "title": "Databases",
-    "set": "SQL, MongoDB, Tableau"
+    'title': 'Databases',
+    'set':'SQL, MongoDB, Tableau'
   },
   {
-    "title": "Soft Skills",
-    "set": "Leadership, Event Management, Writing, Public Speaking, Time Management"
+    'title': 'Soft Skills',
+    'set': 'Leadership, Event Management, Writing, Public Speaking, Time Management'
   }
 ]
 
@@ -62,7 +62,7 @@ Education=[
 ]
 @app.route('/')
 def hello_world():
-    return render_template('home.html',Skillset=Skillset,Projects=Projects,Education=Education)
+    return render_template('home.html',Skills=Skills,Projects=Projects,Education=Education)
 
 @app.route('/api/project')
 def project_list():
