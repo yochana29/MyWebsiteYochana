@@ -31,7 +31,11 @@
             #WebDevelopment #AI #Robotics #TechEnthusiast
             </p>
             <h2 class="text-center" mt-2 mb-4>Projects</h2>
-            <p>TO do</p>
+            <p>{% for project in Projects %}
+                {%include "projects.html" %}
+
+                {% endfor %}
+            </p>
             <div class="text-center">
                 <button class="btn btn-primary btn-sm">Contact me</button>
                 <p mt-4>Copyright 2024,Yochana</p>
